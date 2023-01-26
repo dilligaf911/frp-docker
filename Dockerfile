@@ -11,8 +11,8 @@ RUN chmod +x /docker-entrypoint.sh \
   && cd /tmp \
   && wget -O frp.tar.gz "https://github.com/fatedier/frp/releases/download/v${frp_version}/frp_${frp_version}_linux_arm64.tar.gz" \
   && tar -xzf frp.tar.gz \
-  && mv ./frp_${frp_version}_linux_amd64/frpc /usr/local/bin \
-  && mv ./frp_${frp_version}_linux_amd64/frps /usr/local/bin \
+  && mv ./frp_${frp_version}_linux_arm64/frpc /usr/local/bin \
+  && mv ./frp_${frp_version}_linux_arm64/frps /usr/local/bin \
   && rm -rf /tmp/*
 
 RUN apk del .build-dependencies
